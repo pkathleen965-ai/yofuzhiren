@@ -3,6 +3,8 @@
 import Navigation from "../components/Navigation";
 import { FadeIn } from "../components/Animations";
 import ContactForm from "../components/ContactForm";
+import { TaijiSymbol, BaguaSymbol, Divider } from "../components/TaoistSymbols";
+import { motion } from "framer-motion";
 
 const contactInfo = [
   {
@@ -63,6 +65,72 @@ const faqs = [
   },
 ];
 
+const zhongShengJiBenefits = [
+  {
+    icon: "💰",
+    title: "增旺财运",
+    desc: "通过种生基聚气纳财，提升个人财运势能",
+  },
+  {
+    icon: "🏥",
+    title: "祛病延年",
+    desc: "借助地气滋养，改善身体状况，增强免疫力",
+  },
+  {
+    icon: "📈",
+    title: "事业亨通",
+    desc: "激活生命能量，助力事业腾飞，贵人相助",
+  },
+  {
+    icon: "👨‍👩‍👧‍👦",
+    title: "家庭和睦",
+    desc: "调和家庭气场，增进家人感情，家宅平安",
+  },
+  {
+    icon: "🎯",
+    title: "贵人扶持",
+    desc: "增强人际运势，得贵人相助，逢凶化吉",
+  },
+  {
+    icon: "⚖️",
+    title: "趋吉避凶",
+    desc: "化解命中劫数，转危为安，逢凶化吉",
+  },
+];
+
+const zhongShengJiProcess = [
+  {
+    step: "01",
+    title: "命理分析",
+    desc: "根据生辰八字，详细分析命理格局，确定种生基的方位与时机",
+  },
+  {
+    step: "02",
+    title: "寻龙点穴",
+    desc: "由专业师傅实地勘测，寻找藏风聚气之风水宝地",
+  },
+  {
+    step: "03",
+    title: "择吉日时",
+    desc: "选择黄道吉日，配合天时地利，确保仪式效果最大化",
+  },
+  {
+    step: "04",
+    title: "准备材料",
+    desc: "收集贴身物品（头发、指甲等），并进行净化处理",
+  },
+  {
+    step: "05",
+    title: "开坛作法",
+    desc: "依循古法，举行种生基仪式，注入灵气能量",
+  },
+  {
+    step: "06",
+    title: "后续维护",
+    desc: "定期祭拜养护，确保生基灵气不衰，持续发挥效力",
+  },
+];
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#F5F3EF]">
@@ -106,7 +174,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form & Social */}
-        <section className="py-16 sm:py-20 bg-[#F5F3EF]">
+        <section id="contact-form" className="py-16 sm:py-20 bg-[#F5F3EF]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               {/* Contact Form */}
@@ -170,6 +238,140 @@ export default function ContactPage() {
                 </div>
               </FadeIn>
             </div>
+          </div>
+        </section>
+
+        {/* 种生基专属服务 */}
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-[#1a0f0a] via-[#2C1810] to-[#3E2723] text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <BaguaSymbol size={600} className="text-amber-400 absolute -top-40 -right-40" />
+            <TaijiSymbol size={300} className="text-amber-400 absolute -bottom-20 -left-20" />
+          </div>
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <FadeIn>
+              <div className="text-center mb-16">
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-4xl">🏔️</span>
+                  </div>
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-serif">
+                  种生基 · 改命转运秘法
+                </h2>
+                <Divider className="my-6" />
+                <p className="text-xl text-amber-200 max-w-3xl mx-auto leading-relaxed">
+                  种生基，又称"寿坟"、"生基"，是道家千年秘传的改命转运之法。
+                  通过将生人的贴身物品埋藏于风水宝地，借助天地灵气滋养生命能量，
+                  达到趋吉避凶、增旺运势的效果。
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Benefits */}
+            <div className="mb-20">
+              <FadeIn>
+                <h3 className="text-2xl font-bold text-center mb-10 font-serif text-amber-400">
+                  种生基六大功效
+                </h3>
+              </FadeIn>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {zhongShengJiBenefits.map((item, index) => (
+                  <FadeIn key={index} delay={index * 0.1}>
+                    <motion.div
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40 transition-all"
+                    >
+                      <div className="text-4xl mb-4">{item.icon}</div>
+                      <h4 className="text-xl font-bold text-amber-400 mb-2">{item.title}</h4>
+                      <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                    </motion.div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+
+            {/* Process */}
+            <div className="mb-16">
+              <FadeIn>
+                <h3 className="text-2xl font-bold text-center mb-10 font-serif text-amber-400">
+                  种生基服务流程
+                </h3>
+              </FadeIn>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {zhongShengJiProcess.map((item, index) => (
+                  <FadeIn key={index} delay={index * 0.1}>
+                    <div className="relative">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10 hover:border-amber-400/30 transition-all h-full">
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-white font-bold shrink-0">
+                            {item.step}
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-bold text-amber-400 mb-2">{item.title}</h4>
+                            <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+
+            {/* Notice */}
+            <FadeIn>
+              <div className="bg-amber-900/30 border border-amber-500/30 rounded-xl p-6 sm:p-8 mb-10">
+                <h4 className="text-xl font-bold text-amber-400 mb-4 flex items-center gap-2">
+                  <span>⚠️</span> 重要提示
+                </h4>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-400 mt-1">•</span>
+                    <span>种生基需选择风水宝地，非随意可为之，需由专业师傅勘测选址</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-400 mt-1">•</span>
+                    <span>种生基效果因人而异，需配合个人命理及后天努力</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-400 mt-1">•</span>
+                    <span>种生基后需定期祭拜维护，确保灵气不衰</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-400 mt-1">•</span>
+                    <span>本服务为传统文化传承项目，仅限有缘人预约</span>
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* CTA */}
+            <FadeIn>
+              <div className="text-center">
+                <p className="text-amber-200 mb-6 text-lg">
+                  种生基为高端定制服务，名额有限，需提前预约咨询
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#contact-form"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-4 bg-gradient-to-r from-amber-500 to-amber-700 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-amber-500/30 transition-all"
+                  >
+                    立即预约咨询
+                  </motion.a>
+                  <motion.a
+                    href="https://www.women999.top/fashi"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-4 border-2 border-amber-500 text-amber-400 rounded-full font-bold text-lg hover:bg-amber-500/10 transition-all"
+                  >
+                    了解更多法事服务
+                  </motion.a>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
