@@ -92,7 +92,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-2xl sm:text-3xl mb-4 font-light"
             >
-              太上玄门道符堂
+              武当后山符合堂
             </motion.p>
 
             <motion.p
@@ -162,7 +162,7 @@ export default function Home() {
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     道教符箓源于上古祝由术，历经数千年发展，蕴含着深邃的哲学思想和实践智慧。
-                    《黄帝内经》云：&#34;古之治病，唯其移精变气，可祝由而已。&#34;符箓的本质，
+                    《黄帝内经》云："古之治病，唯其移精变气，可祝由而已。"符箓的本质，
                     是通过特定的符号与仪式，沟通天地灵气，调整人体能量场，达到祈福消灾、
                     转运改命的效果。
                   </p>
@@ -181,7 +181,7 @@ export default function Home() {
                   <div className="text-center relative z-10">
                     <TaijiSymbol size={80} className="text-[#8B4513] mx-auto mb-6" />
                     <blockquote className="text-2xl font-bold text-[#8B4513] mb-4 font-serif">
-                      &#34;符是福的种子<br />福是符的显化&#34;
+                      "符是福的种子<br />福是符的显化"
                     </blockquote>
                     <p className="text-gray-600">千年传承 · 正统道家 · 祈福消灾</p>
                   </div>
@@ -222,12 +222,12 @@ export default function Home() {
                 {
                   icon: "🔑",
                   title: "现代之符",
-                  desc: "开启系统的开关，是我们内心&#34;幸福系统&#34;的密码。找到自己的符，找到生命的节奏，不再跟随别人的鼓点。",
+                  desc: "开启系统的开关，是我们内心"幸福系统"的密码。找到自己的符，找到生命的节奏，不再跟随别人的鼓点。",
                 },
                 {
                   icon: "✨",
                   title: "未来之符",
-                  desc: "生命算法的觉醒，是激活&#34;幸福基因&#34;的指令。帮助我们活出最完整的自己，走向意识路径的觉醒。",
+                  desc: "生命算法的觉醒，是激活"幸福基因"的指令。帮助我们活出最完整的自己，走向意识路径的觉醒。",
                 },
               ].map((item, index) => (
                 <StaggerItem key={index}>
@@ -393,7 +393,7 @@ export default function Home() {
                         <span className="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">{item.result}</span>
                       </div>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-sm">&#34;{item.content}&#34;</p>
+                    <p className="text-gray-600 leading-relaxed text-sm">"{item.content}"</p>
                   </motion.div>
                 </StaggerItem>
               ))}
@@ -462,7 +462,7 @@ export default function Home() {
                 <TaijiSymbol size={40} className="text-amber-400" />
                 <div>
                   <h3 className="text-xl font-bold text-amber-400 font-serif">有符之人</h3>
-                  <p className="text-xs text-gray-400">太上玄门道符堂</p>
+                  <p className="text-xs text-gray-400">武当后山符合堂</p>
                 </div>
               </div>
               <p className="text-sm text-gray-400">传承道家祝由智慧<br />弘扬符道文化</p>
@@ -495,7 +495,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
-            <p>© 2026 有符之人 · 太上玄门道符堂 · 符道文化传承中心</p>
+            <p>© 2026 有符之人 · 武当后山符合堂 · 符道文化传承中心</p>
           </div>
         </div>
       </footer>
