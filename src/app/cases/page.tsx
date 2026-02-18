@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import { FadeIn, StaggerContainer, StaggerItem } from "../components/Animations";
 import { motion } from "framer-motion";
 
-const categories = ["全部", "感情修复", "事业财运", "学业进步", "家庭和睦", "健康平安"];
+const categories = ["全部", "感情修复", "事业财运", "学业进步", "家庭和睦", "健康平安", "安太岁", "还阴债", "增补财库", "驱邪化煞"];
 
 const cases = [
   {
@@ -72,6 +72,138 @@ const cases = [
       "经常需要出差，总觉得心神不宁。佩戴平安符后，每次出行都感觉安心许多，工作顺利，身体健康，感谢有符之人的护佑。",
     service: "平安符",
     duration: "长期佩戴",
+  },
+  {
+    id: 7,
+    name: "周先生",
+    avatar: "周",
+    category: "安太岁",
+    result: "太岁化解",
+    content:
+      "本命年犯太岁，做事总觉得不顺心，事业也遇到瓶颈。做了安太岁法事后，感觉整个人顺了很多，年底还升职加薪了，真的很感谢师傅的指点。",
+    service: "安太岁法事",
+    duration: "1年",
+  },
+  {
+    id: 8,
+    name: "吴女士",
+    avatar: "吴",
+    category: "还阴债",
+    result: "运势好转",
+    content:
+      "生活中总是各种不顺，财运也不好。师傅说我有阴债未还，做了还阴债法事后，感觉人生开始顺利了，财运也慢慢好转。",
+    service: "还阴债法事",
+    duration: "1个月见效",
+  },
+  {
+    id: 9,
+    name: "郑先生",
+    avatar: "郑",
+    category: "增补财库",
+    result: "财库充盈",
+    content:
+      "做生意多年，虽然收入不错但总是存不住钱。做了增补财库法事后，现在不仅能存下钱，生意也越来越好，感谢师傅的帮助。",
+    service: "增补财库法事",
+    duration: "3个月",
+  },
+  {
+    id: 10,
+    name: "孙女士",
+    avatar: "孙",
+    category: "驱邪化煞",
+    result: "邪气化解",
+    content:
+      "搬新家后总觉得不对劲，晚上睡不好，家人也经常生病。请师傅做了驱邪化煞法事后，家里气场明显好了，全家人的健康也恢复了正常。",
+    service: "驱邪化煞法事",
+    duration: "2周见效",
+  },
+  {
+    id: 11,
+    name: "黄先生",
+    avatar: "黄",
+    category: "事业财运",
+    result: "投资顺利",
+    content:
+      "之前投资总是亏钱，感觉运气不好。请了偏财符后，投资开始有回报，今年收益比去年翻了一番，感谢师傅的指点。",
+    service: "偏财符",
+    duration: "半年",
+  },
+  {
+    id: 12,
+    name: "林女士",
+    avatar: "林",
+    category: "感情修复",
+    result: "姻缘美满",
+    content:
+      "单身多年，相亲总是不成。做了姻缘符调理后，很快遇到了现在的男朋友，性格很合得来，已经在筹备婚事了。",
+    service: "姻缘符",
+    duration: "3个月",
+  },
+  {
+    id: 13,
+    name: "许先生",
+    avatar: "许",
+    category: "学业进步",
+    result: "考研成功",
+    content:
+      "考研二战压力大，心里很焦虑。请了文昌符后，心态平和了很多，考试发挥很好，成功考上了心仪的研究生院校。",
+    service: "文昌符",
+    duration: "半年",
+  },
+  {
+    id: 14,
+    name: "冯女士",
+    avatar: "冯",
+    category: "家庭和睦",
+    result: "婆媳和解",
+    content:
+      "和婆婆关系一直不好，经常争吵，老公夹在中间很为难。请了和合符调理后，现在和婆婆关系改善了很多，家庭氛围也和谐了。",
+    service: "和合符",
+    duration: "2个月",
+  },
+  {
+    id: 15,
+    name: "何先生",
+    avatar: "何",
+    category: "安太岁",
+    result: "冲太岁化解",
+    content:
+      "冲太岁那年特别倒霉，出门都摔跤，工作也不顺。做了安太岁法事后，下半年开始转运，之前的烦心事都解决了。",
+    service: "安太岁法事",
+    duration: "半年",
+  },
+  {
+    id: 16,
+    name: "马女士",
+    avatar: "马",
+    category: "健康平安",
+    result: "病痛减轻",
+    content:
+      "长期被失眠困扰，看了很多医生都没用。请了安神符后，睡眠质量明显改善，现在能睡个好觉了，精神状态也好很多。",
+    service: "安神符",
+    duration: "1个月",
+  },
+  {
+    id: 17,
+    name: "徐先生",
+    avatar: "徐",
+    category: "增补财库",
+    result: "财运亨通",
+    content:
+      "做销售工作，业绩一直上不去。补了财库后，客户资源变多了，业绩翻倍，年终奖金也拿到了，感谢师傅！",
+    service: "增补财库法事",
+    duration: "2个月",
+  },
+  {
+    id: 18,
+    name: "朱女士",
+    avatar: "朱",
+    category: "驱邪化煞",
+    result: "噩梦消失",
+    content:
+      "连续几个月做噩梦，精神状态很差。师傅说有邪气干扰，做了驱邪法事后，噩梦消失了，整个人精神焕发。",
+    service: "驱邪符",
+    duration: "1周见效",
   },
 ];
 
