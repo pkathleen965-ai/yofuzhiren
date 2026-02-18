@@ -68,66 +68,109 @@ const faqs = [
 const zhongShengJiBenefits = [
   {
     icon: "💰",
-    title: "增旺财运",
-    desc: "通过种生基聚气纳财，提升个人财运势能",
+    title: "招财进宝",
+    desc: "更多商业机会，出门遇贵人，财运亨通",
   },
   {
     icon: "🏥",
-    title: "祛病延年",
-    desc: "借助地气滋养，改善身体状况，增强免疫力",
+    title: "延年益寿",
+    desc: "增强生命力，改善身体状况，精神充沛",
+  },
+  {
+    icon: "💕",
+    title: "姻缘美满",
+    desc: "改善爱情运，缔结美好姻缘，家庭幸福",
+  },
+  {
+    icon: "👶",
+    title: "添丁旺子",
+    desc: "促进子嗣缘份，家庭人丁兴旺",
+  },
+  {
+    icon: "📚",
+    title: "启智开慧",
+    desc: "提升智慧，学业进步，思维敏捷",
   },
   {
     icon: "📈",
-    title: "事业亨通",
-    desc: "激活生命能量，助力事业腾飞，贵人相助",
+    title: "催官进禄",
+    desc: "事业亨通，贵人扶持，官运亨通",
   },
   {
-    icon: "👨‍👩‍👧‍👦",
-    title: "家庭和睦",
-    desc: "调和家庭气场，增进家人感情，家宅平安",
+    icon: "✨",
+    title: "转运改命",
+    desc: "改变运势，逢凶化吉，趋吉避凶",
   },
   {
-    icon: "🎯",
-    title: "贵人扶持",
-    desc: "增强人际运势，得贵人相助，逢凶化吉",
+    icon: "💪",
+    title: "元气充沛",
+    desc: "吸收大地磁场，精力旺盛，正能量满满",
+  },
+];
+
+const fengShuiElements = [
+  {
+    name: "龙",
+    icon: "🐉",
+    desc: "选择有龙脉之地，象征活力。龙被认为呼吸宇宙生命进入土地，与权力、尊严、繁荣相连。",
   },
   {
-    icon: "⚖️",
-    title: "趋吉避凶",
-    desc: "化解命中劫数，转危为安，逢凶化吉",
+    name: "穴",
+    icon: "🌀",
+    desc: "寻找真穴之处，是风水学中最具挑战性的环节，需要专业师傅实地勘测确认。",
+  },
+  {
+    name: "砂",
+    icon: "🏔️",
+    desc: "代表周围的山势环境，形成藏风聚气的格局，护卫生基灵气不散。",
+  },
+  {
+    name: "水",
+    icon: "💧",
+    desc: "表示寿命与财运，水流环绕生基，寓意财源滚滚，福泽绵长。",
+  },
+  {
+    name: "向",
+    icon: "🧭",
+    desc: "指方位朝向，需配合个人命理，选择最佳坐向，接收天地灵气。",
   },
 ];
 
 const zhongShengJiProcess = [
   {
     step: "01",
-    title: "命理分析",
-    desc: "根据生辰八字，详细分析命理格局，确定种生基的方位与时机",
+    title: "风水选址",
+    desc: "由专业风水师勘测，寻找藏风聚气之风水宝地，确认龙脉真穴",
   },
   {
     step: "02",
-    title: "寻龙点穴",
-    desc: "由专业师傅实地勘测，寻找藏风聚气之风水宝地",
+    title: "命理分析",
+    desc: "根据生辰八字详细分析，确定种生基的最佳方位、时机与方式",
   },
   {
     step: "03",
     title: "择吉日时",
-    desc: "选择黄道吉日，配合天时地利，确保仪式效果最大化",
+    desc: "选择黄道吉日良辰，配合天时地利，确保仪式效果最大化",
   },
   {
     step: "04",
-    title: "准备材料",
-    desc: "收集贴身物品（头发、指甲等），并进行净化处理",
+    title: "准备物品",
+    desc: "收集头发、指甲、贴身衣物等物品，连同生辰八字一同净化处理",
   },
   {
     step: "05",
     title: "开坛作法",
-    desc: "依循古法，举行种生基仪式，注入灵气能量",
+    desc: "依循古法举行种生基仪式，诵经祈福，注入灵气能量",
   },
   {
     step: "06",
-    title: "后续维护",
-    desc: "定期祭拜养护，确保生基灵气不衰，持续发挥效力",
+    title: "诵经加持",
+    desc: "可选连续诵经49天，达到最佳效果，持续为生基注入能量",
+  },
+  {
+    step: "07",
+    title: "后续养护",
+    desc: "定期祭拜维护，行善积德，确保生基灵气不衰，持续发挥效力",
   },
 ];
 
@@ -260,11 +303,17 @@ export default function ContactPage() {
                   种生基 · 改命转运秘法
                 </h2>
                 <Divider className="my-6" />
-                <p className="text-xl text-amber-200 max-w-3xl mx-auto leading-relaxed">
-                  种生基，又称"寿坟"、"生基"，是道家千年秘传的改命转运之法。
-                  通过将生人的贴身物品埋藏于风水宝地，借助天地灵气滋养生命能量，
-                  达到趋吉避凶、增旺运势的效果。
-                </p>
+                <div className="max-w-4xl mx-auto">
+                  <p className="text-xl text-amber-200 leading-relaxed mb-4">
+                    <strong className="text-white">种生基</strong>，乃"生命的根基"，是阴宅风水学之精髓。
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    运用<strong className="text-amber-400">天地灵气</strong>，将生人的头发、牙齿、皮肤、指甲、衣物，连同生辰八字埋入风水龙穴中。毛发、指甲、精血里的DNA能与地气相应，感应到当事人身上，使其直接吸收大地磁场和宇宙自然能量。
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    这门独特的风水技术源于中国江西，在港澳台、新加坡、马来西亚等地广受道教信徒欢迎。
+                  </p>
+                </div>
               </div>
             </FadeIn>
 
@@ -272,24 +321,65 @@ export default function ContactPage() {
             <div className="mb-20">
               <FadeIn>
                 <h3 className="text-2xl font-bold text-center mb-10 font-serif text-amber-400">
-                  种生基六大功效
+                  种生基八大功效
                 </h3>
               </FadeIn>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {zhongShengJiBenefits.map((item, index) => (
                   <FadeIn key={index} delay={index * 0.1}>
                     <motion.div
                       whileHover={{ y: -5, scale: 1.02 }}
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40 transition-all"
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-amber-500/20 hover:border-amber-400/40 transition-all"
                     >
-                      <div className="text-4xl mb-4">{item.icon}</div>
-                      <h4 className="text-xl font-bold text-amber-400 mb-2">{item.title}</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                      <div className="text-3xl mb-3">{item.icon}</div>
+                      <h4 className="text-lg font-bold text-amber-400 mb-1">{item.title}</h4>
+                      <p className="text-gray-300 text-xs leading-relaxed">{item.desc}</p>
                     </motion.div>
                   </FadeIn>
                 ))}
               </div>
             </div>
+
+            {/* 风水五要素 */}
+            <div className="mb-20">
+              <FadeIn>
+                <div className="text-center mb-10">
+                  <h3 className="text-2xl font-bold font-serif text-amber-400 mb-4">
+                    风水选址五要素
+                  </h3>
+                  <p className="text-gray-400 text-sm">龙、穴、砂、水、向，缺一不可</p>
+                </div>
+              </FadeIn>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                {fengShuiElements.map((item, index) => (
+                  <FadeIn key={index} delay={index * 0.1}>
+                    <motion.div
+                      whileHover={{ y: -5 }}
+                      className="bg-gradient-to-b from-amber-900/30 to-transparent rounded-xl p-5 border border-amber-500/20 text-center"
+                    >
+                      <div className="text-4xl mb-3">{item.icon}</div>
+                      <h4 className="text-2xl font-bold text-amber-400 mb-2">{item.name}</h4>
+                      <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+                    </motion.div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+
+            {/* 种生基原理 */}
+            <FadeIn>
+              <div className="mb-16 bg-white/5 rounded-xl p-6 sm:p-8 border border-amber-500/20">
+                <h3 className="text-xl font-bold text-amber-400 mb-4 flex items-center gap-2">
+                  <span>🔮</span> 种生基的原理
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  种生基最初起源于中国东南部的江西省，包括为活人创建一个假墓，让当事人可以从宇宙中吸取"气"用来增强寿命。
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  利用自然环境和自然的力量，风水好的生坟，据说可以通过纠正你生命线或命运过程中的不完善，来造福于当事人。通过埋葬当事人的发肤或贴身物品，当事人将从土地吸收良好的元素，以及周边环境中所有的善良和富足。
+                </p>
+              </div>
+            </FadeIn>
 
             {/* Process */}
             <div className="mb-16">
@@ -298,18 +388,18 @@ export default function ContactPage() {
                   种生基服务流程
                 </h3>
               </FadeIn>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {zhongShengJiProcess.map((item, index) => (
                   <FadeIn key={index} delay={index * 0.1}>
                     <div className="relative">
-                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10 hover:border-amber-400/30 transition-all h-full">
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-white font-bold shrink-0">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-amber-500/10 hover:border-amber-400/30 transition-all h-full">
+                        <div className="flex items-start gap-3">
+                          <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                             {item.step}
                           </div>
                           <div>
-                            <h4 className="text-lg font-bold text-amber-400 mb-2">{item.title}</h4>
-                            <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                            <h4 className="text-base font-bold text-amber-400 mb-1">{item.title}</h4>
+                            <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
                           </div>
                         </div>
                       </div>
@@ -323,26 +413,26 @@ export default function ContactPage() {
             <FadeIn>
               <div className="bg-amber-900/30 border border-amber-500/30 rounded-xl p-6 sm:p-8 mb-10">
                 <h4 className="text-xl font-bold text-amber-400 mb-4 flex items-center gap-2">
-                  <span>⚠️</span> 重要提示
+                  <span>⚠️</span> 种生基注意事项
                 </h4>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-400 mt-1">•</span>
-                    <span>种生基需选择风水宝地，非随意可为之，需由专业师傅勘测选址</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-400 mt-1">•</span>
-                    <span>种生基效果因人而异，需配合个人命理及后天努力</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-400 mt-1">•</span>
-                    <span>种生基后需定期祭拜维护，确保灵气不衰</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-400 mt-1">•</span>
-                    <span>本服务为传统文化传承项目，仅限有缘人预约</span>
-                  </li>
-                </ul>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <h5 className="font-bold text-white mb-2">保密原则</h5>
+                    <p className="text-gray-300 text-sm">种生基后建议保密，否则可能影响效果</p>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white mb-2">行善积德</h5>
+                    <p className="text-gray-300 text-sm">鼓励当事人多多行善积德，以增福报</p>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white mb-2">专业选址</h5>
+                    <p className="text-gray-300 text-sm">需由专业师傅勘测选址，非随意可为之</p>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white mb-2">定期维护</h5>
+                    <p className="text-gray-300 text-sm">定期祭拜养护，确保灵气不衰</p>
+                  </div>
+                </div>
               </div>
             </FadeIn>
 
