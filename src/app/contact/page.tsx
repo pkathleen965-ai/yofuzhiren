@@ -305,7 +305,7 @@ export default function ContactPage() {
                 <Divider className="my-6" />
                 <div className="max-w-4xl mx-auto">
                   <p className="text-xl text-amber-200 leading-relaxed mb-4">
-                    <strong className="text-white">种生基</strong>，乃"生命的根基"，是阴宅风水学之精髓。
+                    <strong className="text-white">种生基</strong>，乃{"\""}生命的根基{"\""}，是阴宅风水学之精髓。
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     运用<strong className="text-amber-400">天地灵气</strong>，将生人的头发、牙齿、皮肤、指甲、衣物，连同生辰八字埋入风水龙穴中。毛发、指甲、精血里的DNA能与地气相应，感应到当事人身上，使其直接吸收大地磁场和宇宙自然能量。
